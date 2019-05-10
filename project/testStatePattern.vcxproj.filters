@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\state">
+      <UniqueIdentifier>{4dd1f093-390a-4786-96a9-419a2bccae00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\state">
+      <UniqueIdentifier>{620b5d71-b4e6-406c-a55a-c3a2bed98204}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMng.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCtrl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>ソース ファイル\state</Filter>
+    </ClCompile>
+    <ClCompile Include="PressSpace.cpp">
+      <Filter>ソース ファイル\state</Filter>
+    </ClCompile>
+    <ClCompile Include="NotPress.cpp">
+      <Filter>ソース ファイル\state</Filter>
+    </ClCompile>
+    <ClCompile Include="PressLShift.cpp">
+      <Filter>ソース ファイル\state</Filter>
+    </ClCompile>
+    <ClCompile Include="PressRShift.cpp">
+      <Filter>ソース ファイル\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Context.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SceneMng.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCtrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>ヘッダー ファイル\state</Filter>
+    </ClInclude>
+    <ClInclude Include="PressSpace.h">
+      <Filter>ヘッダー ファイル\state</Filter>
+    </ClInclude>
+    <ClInclude Include="NotPress.h">
+      <Filter>ヘッダー ファイル\state</Filter>
+    </ClInclude>
+    <ClInclude Include="PressLShift.h">
+      <Filter>ヘッダー ファイル\state</Filter>
+    </ClInclude>
+    <ClInclude Include="PressRShift.h">
+      <Filter>ヘッダー ファイル\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
