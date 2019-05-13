@@ -1,4 +1,5 @@
 #include <DxLib.h>
+#include <memory>
 #include "Context.h"
 #include "GameCtrl.h"
 #include "PressSpace.h"
@@ -7,11 +8,10 @@
 #include "PressRShift.h"
 
 
-
 Context::Context()
 {
 	stateNum = 0;
-	state = NotPress::GetInstance();
+	state = std::make_unique<NotPress>();
 }
 
 
@@ -49,18 +49,13 @@ void Context::UpDate(const GameCtrl &  controller)
 
 // -----------------------ステートパターンあり-----------------------
 
-	state.PressKeyBoard(controller);
+	state = state->PressKeyBoard(controller, std::move(state));
 
-}
-
-void Context::ChengeState(State state)
-{
-	this->state = state;
 }
 
 void Context::DrawString(void)
 {
-	state.DrawString();
+	state->DrawString();
 }
 
 const int Context::GetState(void) const

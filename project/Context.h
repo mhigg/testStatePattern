@@ -1,4 +1,6 @@
 #pragma once
+// ÌßÚ²Ô°‚ÉˆÊ’u‚·‚é¸×½
+
 #include "State.h"
 #include "GameCtrl.h"
 
@@ -8,13 +10,12 @@ public:
 	Context();
 	~Context();
 
-	void UpDate(const GameCtrl &  controller);
-	void ChengeState(State state);
+	void UpDate(const GameCtrl & controller);	// SetMove‚ÉˆÊ’u‚·‚éŠÖ”
 	void DrawString(void);
 	const int GetState(void) const;
 
 private:
-	State state;
+	uniqueState state;  // ©g‚Ìó‘Ô
 	int stateNum;
 };
 

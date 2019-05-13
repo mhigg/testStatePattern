@@ -1,19 +1,15 @@
 #pragma once
 #include "State.h"
+#include "GameCtrl.h"
+
 class PressLShift :
 	public State
 {
 public:
-	static PressLShift & GetInstance(void)
-	{
-		static PressLShift s_instance;
-		return s_instance;
-	}
-
-	void DrawString(void);
-
-private:
 	PressLShift();
 	~PressLShift();
+
+	uniqueState PressKeyBoard(const GameCtrl & controller, uniqueState state);
+	void DrawString(void);
 };
 

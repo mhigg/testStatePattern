@@ -1,4 +1,5 @@
 #include <DxLib.h>
+#include <memory>
 #include "NotPress.h"
 #include "PressSpace.h"
 #include "PressLShift.h"
@@ -15,7 +16,7 @@ NotPress::~NotPress()
 {
 }
 
-State & NotPress::PressKeyBoard(const GameCtrl & controller)
+uniqueState NotPress::PressKeyBoard(const GameCtrl & controller, uniqueState state)
 {
 	auto ctrl = controller.GetCtrl(KEY_TYPE_NOW);
 	auto ctrlOld = controller.GetCtrl(KEY_TYPE_OLD);
@@ -24,22 +25,22 @@ State & NotPress::PressKeyBoard(const GameCtrl & controller)
 	// スペースキーを押している状態
 	if (ctrl[KEY_INPUT_SPACE])
 	{
-		State::ChengeState(PressSpace::GetInstance());
+		return std::make_unique<PressSpace>();
 	}
 
 	// LSHIFTを押している状態
 	if (ctrl[KEY_INPUT_LSHIFT])
 	{
-		ChengeState(PressLShift::GetInstance());
+		return std::make_unique<PressLShift>();
 	}
 
 	// RSHIFTを押している状態
 	if (ctrl[KEY_INPUT_RSHIFT])
 	{
-		ChengeState(PressRShift::GetInstance());
+		return std::make_unique<PressRShift>();
 	}
 
-	return ;
+	return state;
 }
 
 void NotPress::DrawString(void)

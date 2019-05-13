@@ -1,19 +1,15 @@
 #pragma once
 #include "State.h"
+#include "GameCtrl.h"
+
 class PressSpace :
 	public State
 {
 public:
-	static PressSpace & GetInstance(void)
-	{
-		static PressSpace s_instance;
-		return s_instance;
-	}
-
-	void DrawString(void);
-
-private:
 	PressSpace();
 	~PressSpace();
+
+	uniqueState PressKeyBoard(const GameCtrl & controller, uniqueState state);
+	void DrawString(void);
 };
 
