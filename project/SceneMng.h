@@ -25,7 +25,7 @@ private:
 	~SceneMng();
 
 	bool Init(void);
-	void UpDate(void);
+	void UpDate(void);	// obj‚ÌSetMoveA‚Ü‚½‚ÍGameScene“à‚Ìobj->UpDate()‚ÉˆÊ’u‚·‚éŠÖ”
 	void Draw(void);
 
 	std::unique_ptr<GameCtrl> gameCtrl;
